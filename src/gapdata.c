@@ -12,6 +12,7 @@
 
 #include "src/compiled.h"          /* GAP headers                */
 #include "avltree.h"
+#include "binaryheap.h"
 #include "hashtable.h"
 
 /*F * * * * * * * * * * * * * initialize package * * * * * * * * * * * * * * */
@@ -30,6 +31,9 @@ typedef Obj (* GVarFuncType)(/*arguments*/);
 *V  GVarFuncs . . . . . . . . . . . . . . . . . . list of functions to export
 */
 static StructGVarFunc GVarFuncs [] = {
+
+    GVAR_FUNC_TABLE_ENTRY("heap.c", _PCQL_Heap_Insert_C, 2, "heap, elm"),
+    GVAR_FUNC_TABLE_ENTRY("heap.c", _PCQL_Heap_ReplaceMax_C, 2, "heap, elm"),
 
     GVAR_FUNC_TABLE_ENTRY("avltree.c", AVLCmp_C, 2, "a, b"),
     GVAR_FUNC_TABLE_ENTRY("avltree.c", AVLNewNode_C, 1, "t"),
