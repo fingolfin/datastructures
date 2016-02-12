@@ -1,5 +1,5 @@
-#ifndef __HASHTABLE_H
-#define __HASHTABLE_H
+#ifndef HASHTABLE_H
+#define HASHTABLE_H
 
 extern Obj HTGrow;
 
