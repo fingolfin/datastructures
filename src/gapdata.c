@@ -7,12 +7,14 @@
 **
 */
 
+#include "src/compiled.h"          /* GAP headers                */
+
+#include "avltree.h"
+#include "hashfun.h"
+#include "hashtable.h"
+
 #include <stdlib.h>
 #include <stdint.h>
-
-#include "src/compiled.h"          /* GAP headers                */
-#include "avltree.h"
-#include "hashtable.h"
 
 /*F * * * * * * * * * * * * * initialize package * * * * * * * * * * * * * * */
 
@@ -22,7 +24,7 @@ typedef Obj (* GVarFuncType)(/*arguments*/);
   {#name, nparam, \
    params, \
    (GVarFuncType)name, \
-   srcfile ":Func" #name }
+   srcfile ":" #name }
 
 
 
@@ -50,6 +52,8 @@ static StructGVarFunc GVarFuncs [] = {
     GVAR_FUNC_TABLE_ENTRY("hashtable.c", HTValue_TreeHash_C, 2, "treehash, x"),
     GVAR_FUNC_TABLE_ENTRY("hashtable.c", HTDelete_TreeHash_C, 2, "treehash, x"),
     GVAR_FUNC_TABLE_ENTRY("hashtable.c", HTUpdate_TreeHash_C, 3, "treehash, x, v"),
+
+    GVAR_FUNC_TABLE_ENTRY("hashfun.c", DATA_HASH_FUNC_FOR_BLIST, 1, "blist"),
 
     { 0 }
 

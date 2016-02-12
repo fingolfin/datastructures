@@ -9,6 +9,7 @@ datastructures_la_SOURCES = \
     src/avltree.c \
     src/avltree.h \
     src/gapdata.c \
+    src/hashfun.c \
     src/hashtable.c \
     src/hashtable.h
 datastructures_la_CPPFLAGS = $(GAP_CPPFLAGS) -DCONFIG_H
