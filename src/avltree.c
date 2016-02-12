@@ -8,10 +8,7 @@
 **  Exported to the GAPData package by Markus Pfeiffer 2014
 */
 
-#include <stdlib.h>
-#include <stdint.h>
-
-#include "src/compiled.h"          /* GAP headers                */
+#include "avltree.h"
 
 #undef PACKAGE
 #undef PACKAGE_BUGREPORT
