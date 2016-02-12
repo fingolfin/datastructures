@@ -1,5 +1,7 @@
-#ifndef HASHTABLE_H
-#define HASHTABLE_H
+#ifndef HASHTABLE_AVLTREE_H
+#define HASHTABLE_AVLTREE_H
+
+#include "src/compiled.h" /* GAP headers */
 
 extern Obj HTGrow;
 

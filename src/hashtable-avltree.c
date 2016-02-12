@@ -8,10 +8,8 @@
 **  Exported to the GAPData package by Markus Pfeiffer 2014
 */
 
-#include <stdlib.h>
-#include <stdint.h>
+#include "hashtable-avltree.h"
 
-#include "src/compiled.h"          /* GAP headers                */
 #include "avltree.h"
 
 #undef PACKAGE
@@ -29,8 +27,6 @@
 #if SIZEOF_VOID_PP != SIZEOF_VOID_P
 #error GAPs word size is different from ours, 64bit/32bit mismatch
 #endif
-
-#include <avltree.h>
 
 Obj HTGrow;         /* Operation function imported from the library */
 

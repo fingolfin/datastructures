@@ -11,7 +11,7 @@
 
 #include "avltree.h"
 #include "hashfun.h"
-#include "hashtable.h"
+#include "hashtable-avltree.h"
 
 #include <stdlib.h>
 #include <stdint.h>
@@ -48,10 +48,10 @@ static StructGVarFunc GVarFuncs [] = {
     GVAR_FUNC_TABLE_ENTRY("avltree.c", AVLDelete_C, 2, "tree, data"),
     GVAR_FUNC_TABLE_ENTRY("avltree.c", AVLIndexDelete_C, 2, "tree, index"),
 
-    GVAR_FUNC_TABLE_ENTRY("hashtable.c", HTAdd_TreeHash_C, 3, "treehash, x, v"),
-    GVAR_FUNC_TABLE_ENTRY("hashtable.c", HTValue_TreeHash_C, 2, "treehash, x"),
-    GVAR_FUNC_TABLE_ENTRY("hashtable.c", HTDelete_TreeHash_C, 2, "treehash, x"),
-    GVAR_FUNC_TABLE_ENTRY("hashtable.c", HTUpdate_TreeHash_C, 3, "treehash, x, v"),
+    GVAR_FUNC_TABLE_ENTRY("hashtable-avltree.c", HTAdd_TreeHash_C, 3, "treehash, x, v"),
+    GVAR_FUNC_TABLE_ENTRY("hashtable-avltree.c", HTValue_TreeHash_C, 2, "treehash, x"),
+    GVAR_FUNC_TABLE_ENTRY("hashtable-avltree.c", HTDelete_TreeHash_C, 2, "treehash, x"),
+    GVAR_FUNC_TABLE_ENTRY("hashtable-avltree.c", HTUpdate_TreeHash_C, 3, "treehash, x, v"),
 
     GVAR_FUNC_TABLE_ENTRY("hashfun.c", DATA_HASH_FUNC_FOR_BLIST, 1, "blist"),
 
